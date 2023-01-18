@@ -2,14 +2,11 @@ import { v4 } from "uuid";
 import "./css/index.css";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
+import { Task } from "./interface/interface";
 
 const $taskForm = document.querySelector<HTMLFormElement>("#taskForm");
 const $taskList = document.querySelector<HTMLDivElement>("#taskList");
-interface Task {
-  id: string;
-  title: string;
-  description: string;
-}
+
 let tasks: Array<Task> = [];
 
 $taskForm?.addEventListener("submit", (e) => {
@@ -60,7 +57,7 @@ const renderTask = (task: Array<Task>) => {
       tasks.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(tasks));
       Toastify({
-        text: "Task Delete"
+        text: "Task Delete",
       }).showToast();
       renderTask(tasks);
     });
