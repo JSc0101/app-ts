@@ -7,7 +7,18 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <from>
+      <label for="title">Title</label>
+      <input type="text" name="title" placeholder="write a title" />
+      <label for="description"></label>
+      <textarea
+        name="description"
+        rows="3"
+        placeholder="write a description"
+      ></textarea>
+
+      <input type="button" name="save" value="Save"/>
+    </from>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
