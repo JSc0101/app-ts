@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-import "./css/index.css";
+import "./index.css";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 import { Task } from "./interface/interface";
