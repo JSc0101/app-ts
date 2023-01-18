@@ -59,6 +59,9 @@ const renderTask = (task: Array<Task>) => {
       const index = tasks.findIndex((t) => t.id === task.id);
       tasks.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(tasks));
+      Toastify({
+        text: "Task Delete"
+      }).showToast();
       renderTask(tasks);
     });
     const $description = document.createElement("p");
